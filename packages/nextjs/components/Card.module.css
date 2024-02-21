@@ -1,0 +1,40 @@
+.card {
+    width:  100px;
+    height:  140px;
+    background-color: white;
+    border-radius:  5px;
+    border:  1px solid black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:  10px;
+    box-shadow:  0  2px  5px rgba(0,  0,  0,  0.3);
+    gap:  1rem; /* Optional: adds space between cards */
+    margin: 0 0.5rem;
+
+  }
+  
+  .card.black {
+    background-color: white;
+    color: black;
+  }
+  
+  .card.red {
+    background-color: white;
+    color: red;
+  }
+  
+  .suit,
+  .value {
+    font-size:  2em;
+    text-align: center;
+  }
+
+  .deck {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 1rem;
+  }

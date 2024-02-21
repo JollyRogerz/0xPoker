@@ -4,6 +4,827 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  10: {
+    zeroxPoker: {
+      address: "0xd2D9aF66eB072365517e50AE320B50E46b46beE4",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "initialOwner",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "activeGame",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "pokerHand",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "salt",
+              type: "string",
+            },
+          ],
+          name: "commit",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "otherPlayer",
+              type: "address",
+            },
+          ],
+          name: "createGame",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "deployer",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "determineDefaultWinner",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "revealP1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "revealP2",
+              type: "bytes32",
+            },
+          ],
+          name: "determineWinner",
+          outputs: [
+            {
+              internalType: "enum zeroxPoker.GameResult",
+              name: "",
+              type: "uint8",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "distributeWinnings",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "games",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "initialized",
+              type: "bool",
+            },
+            {
+              internalType: "address",
+              name: "player1",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "player2",
+              type: "address",
+            },
+            {
+              internalType: "enum zeroxPoker.GameState",
+              name: "gameState",
+              type: "uint8",
+            },
+            {
+              internalType: "bytes32",
+              name: "commit1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "commit2",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "reveal1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "reveal2",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "revealDeadline",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "betAmount",
+              type: "uint256",
+            },
+            {
+              internalType: "enum zeroxPoker.GameResult",
+              name: "gameResult",
+              type: "uint8",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "generateGameHash",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "player",
+              type: "address",
+            },
+          ],
+          name: "getActiveGameData",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "bool",
+                  name: "initialized",
+                  type: "bool",
+                },
+                {
+                  internalType: "address",
+                  name: "player1",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "player2",
+                  type: "address",
+                },
+                {
+                  internalType: "enum zeroxPoker.GameState",
+                  name: "gameState",
+                  type: "uint8",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "commit1",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "commit2",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "reveal1",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "reveal2",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "uint256",
+                  name: "revealDeadline",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "betAmount",
+                  type: "uint256",
+                },
+                {
+                  internalType: "enum zeroxPoker.GameResult",
+                  name: "gameResult",
+                  type: "uint8",
+                },
+              ],
+              internalType: "struct zeroxPoker.GameStruct",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "hasCommitted",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "gameHash",
+              type: "address",
+            },
+          ],
+          name: "joinGame",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "leaveGame",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "salt",
+              type: "string",
+            },
+          ],
+          name: "reveal",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "totalBalance",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        owner: "@openzeppelin/contracts/access/Ownable.sol",
+        renounceOwnership: "@openzeppelin/contracts/access/Ownable.sol",
+        transferOwnership: "@openzeppelin/contracts/access/Ownable.sol",
+      },
+    },
+  },
+  31337: {
+    zeroxPoker: {
+      address: "0xc5a5C42992dECbae36851359345FE25997F5C42d",
+      abi: [
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "initialOwner",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "activeGame",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "pokerHand",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "salt",
+              type: "string",
+            },
+          ],
+          name: "commit",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "otherPlayer",
+              type: "address",
+            },
+          ],
+          name: "createGame",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "deployer",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "determineDefaultWinner",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes32",
+              name: "revealP1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "revealP2",
+              type: "bytes32",
+            },
+          ],
+          name: "determineWinner",
+          outputs: [
+            {
+              internalType: "enum zeroxPoker.GameResult",
+              name: "",
+              type: "uint8",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "distributeWinnings",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "games",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "initialized",
+              type: "bool",
+            },
+            {
+              internalType: "address",
+              name: "player1",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "player2",
+              type: "address",
+            },
+            {
+              internalType: "enum zeroxPoker.GameState",
+              name: "gameState",
+              type: "uint8",
+            },
+            {
+              internalType: "bytes32",
+              name: "commit1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "commit2",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "reveal1",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes32",
+              name: "reveal2",
+              type: "bytes32",
+            },
+            {
+              internalType: "uint256",
+              name: "revealDeadline",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "betAmount",
+              type: "uint256",
+            },
+            {
+              internalType: "enum zeroxPoker.GameResult",
+              name: "gameResult",
+              type: "uint8",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "generateGameHash",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "player",
+              type: "address",
+            },
+          ],
+          name: "getActiveGameData",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "bool",
+                  name: "initialized",
+                  type: "bool",
+                },
+                {
+                  internalType: "address",
+                  name: "player1",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "player2",
+                  type: "address",
+                },
+                {
+                  internalType: "enum zeroxPoker.GameState",
+                  name: "gameState",
+                  type: "uint8",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "commit1",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "commit2",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "reveal1",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "bytes32",
+                  name: "reveal2",
+                  type: "bytes32",
+                },
+                {
+                  internalType: "uint256",
+                  name: "revealDeadline",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "betAmount",
+                  type: "uint256",
+                },
+                {
+                  internalType: "enum zeroxPoker.GameResult",
+                  name: "gameResult",
+                  type: "uint8",
+                },
+              ],
+              internalType: "struct zeroxPoker.GameStruct",
+              name: "",
+              type: "tuple",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "hasCommitted",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "gameHash",
+              type: "address",
+            },
+          ],
+          name: "joinGame",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "leaveGame",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "string",
+              name: "salt",
+              type: "string",
+            },
+          ],
+          name: "reveal",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "totalBalance",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {
+        owner: "@openzeppelin/contracts/access/Ownable.sol",
+        renounceOwnership: "@openzeppelin/contracts/access/Ownable.sol",
+        transferOwnership: "@openzeppelin/contracts/access/Ownable.sol",
+      },
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;

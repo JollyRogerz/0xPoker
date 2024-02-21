@@ -1,0 +1,814 @@
+{
+  "address": "0xd2D9aF66eB072365517e50AE320B50E46b46beE4",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "initialOwner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "activeGame",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokerHand",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "salt",
+          "type": "string"
+        }
+      ],
+      "name": "commit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "otherPlayer",
+          "type": "address"
+        }
+      ],
+      "name": "createGame",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "deployer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "determineDefaultWinner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "revealP1",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "revealP2",
+          "type": "bytes32"
+        }
+      ],
+      "name": "determineWinner",
+      "outputs": [
+        {
+          "internalType": "enum zeroxPoker.GameResult",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "distributeWinnings",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "games",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "initialized",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "player1",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "player2",
+          "type": "address"
+        },
+        {
+          "internalType": "enum zeroxPoker.GameState",
+          "name": "gameState",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "commit1",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "commit2",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "reveal1",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "reveal2",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "revealDeadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "betAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum zeroxPoker.GameResult",
+          "name": "gameResult",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "generateGameHash",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "player",
+          "type": "address"
+        }
+      ],
+      "name": "getActiveGameData",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "bool",
+              "name": "initialized",
+              "type": "bool"
+            },
+            {
+              "internalType": "address",
+              "name": "player1",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "player2",
+              "type": "address"
+            },
+            {
+              "internalType": "enum zeroxPoker.GameState",
+              "name": "gameState",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "commit1",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "commit2",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "reveal1",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "reveal2",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "revealDeadline",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "betAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum zeroxPoker.GameResult",
+              "name": "gameResult",
+              "type": "uint8"
+            }
+          ],
+          "internalType": "struct zeroxPoker.GameStruct",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "hasCommitted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "gameHash",
+          "type": "address"
+        }
+      ],
+      "name": "joinGame",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "leaveGame",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "salt",
+          "type": "string"
+        }
+      ],
+      "name": "reveal",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x8c562b3601718196f53dc8b5da27a3aea07b0aab101954b7f44b83c782c9373d",
+  "receipt": {
+    "to": null,
+    "from": "0x2b30efBA367D669c9cd7723587346a79b67A42DB",
+    "contractAddress": "0xd2D9aF66eB072365517e50AE320B50E46b46beE4",
+    "transactionIndex": 16,
+    "gasUsed": "1942342",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000001000000000000004000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000400000000000000000000000000000800000000000000000000000000",
+    "blockHash": "0xff48a455d0d9a328715ba03684f8f9f678e502d815643b2b78c9a2312c06256d",
+    "transactionHash": "0x8c562b3601718196f53dc8b5da27a3aea07b0aab101954b7f44b83c782c9373d",
+    "logs": [
+      {
+        "transactionIndex": 16,
+        "blockNumber": 116432222,
+        "transactionHash": "0x8c562b3601718196f53dc8b5da27a3aea07b0aab101954b7f44b83c782c9373d",
+        "address": "0xd2D9aF66eB072365517e50AE320B50E46b46beE4",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000002b30efba367d669c9cd7723587346a79b67a42db"
+        ],
+        "data": "0x",
+        "logIndex": 37,
+        "blockHash": "0xff48a455d0d9a328715ba03684f8f9f678e502d815643b2b78c9a2312c06256d"
+      },
+      {
+        "transactionIndex": 16,
+        "blockNumber": 116432222,
+        "transactionHash": "0x8c562b3601718196f53dc8b5da27a3aea07b0aab101954b7f44b83c782c9373d",
+        "address": "0xd2D9aF66eB072365517e50AE320B50E46b46beE4",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000002b30efba367d669c9cd7723587346a79b67a42db",
+          "0x0000000000000000000000002b30efba367d669c9cd7723587346a79b67a42db"
+        ],
+        "data": "0x",
+        "logIndex": 38,
+        "blockHash": "0xff48a455d0d9a328715ba03684f8f9f678e502d815643b2b78c9a2312c06256d"
+      }
+    ],
+    "blockNumber": 116432222,
+    "cumulativeGasUsed": "3875544",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x2b30efBA367D669c9cd7723587346a79b67A42DB"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "324c7c4c63962238279aed3534b9e6d6",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"initialOwner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"activeGame\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokerHand\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"salt\",\"type\":\"string\"}],\"name\":\"commit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"otherPlayer\",\"type\":\"address\"}],\"name\":\"createGame\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"deployer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"determineDefaultWinner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"revealP1\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"revealP2\",\"type\":\"bytes32\"}],\"name\":\"determineWinner\",\"outputs\":[{\"internalType\":\"enum zeroxPoker.GameResult\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distributeWinnings\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"games\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"initialized\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"player1\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"player2\",\"type\":\"address\"},{\"internalType\":\"enum zeroxPoker.GameState\",\"name\":\"gameState\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"commit1\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"commit2\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"reveal1\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"reveal2\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"revealDeadline\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"betAmount\",\"type\":\"uint256\"},{\"internalType\":\"enum zeroxPoker.GameResult\",\"name\":\"gameResult\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"generateGameHash\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"player\",\"type\":\"address\"}],\"name\":\"getActiveGameData\",\"outputs\":[{\"components\":[{\"internalType\":\"bool\",\"name\":\"initialized\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"player1\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"player2\",\"type\":\"address\"},{\"internalType\":\"enum zeroxPoker.GameState\",\"name\":\"gameState\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"commit1\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"commit2\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"reveal1\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"reveal2\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"revealDeadline\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"betAmount\",\"type\":\"uint256\"},{\"internalType\":\"enum zeroxPoker.GameResult\",\"name\":\"gameResult\",\"type\":\"uint8\"}],\"internalType\":\"struct zeroxPoker.GameStruct\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"hasCommitted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"gameHash\",\"type\":\"address\"}],\"name\":\"joinGame\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"leaveGame\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"salt\",\"type\":\"string\"}],\"name\":\"reveal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"createGame(address)\":{\"params\":{\"otherPlayer\":\"- address for player 2\"}},\"determineWinner(bytes32,bytes32)\":{\"params\":{\"revealP1\":\"- p1's reveal, defaults to 0 if not set\",\"revealP2\":\"- p2's reveal, defaults to 0 if not set\"}},\"getActiveGameData(address)\":{\"params\":{\"player\":\"- address of player\"}},\"joinGame(address)\":{\"params\":{\"gameHash\":\"- game address shared by player 1\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"reveal(string)\":{\"params\":{\"salt\":\"- a player chosen secret string from the \\\"commit\\\" phase used to prove their choice via a hash match\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createGame(address)\":{\"notice\":\"Creates a new game, generating a game hash and setting player 1 as sender  and player 2 as the address provided\"},\"determineDefaultWinner()\":{\"notice\":\"Escape function if a player does not reveal in time. The other player can call this function to trigger a \\\"win-by-default\\\"\"},\"determineWinner(bytes32,bytes32)\":{\"notice\":\"Determine the winner based on reveals for p1 and p2 If only 1 has revealed, they win by default\"},\"generateGameHash()\":{\"notice\":\"Util Functions for generating hashes, computing winners and fetching data\"},\"getActiveGameData(address)\":{\"notice\":\"Fetches the game data of the player's active game\"},\"joinGame(address)\":{\"notice\":\"Function for player 2 to join a game with the game address\"},\"leaveGame()\":{\"notice\":\"Players can use this to leave the game at anytime. Usually at the end to reset the UI\"},\"reveal(string)\":{\"notice\":\"Function for players to reveal their choice. The first player to reveal sets a deadline for the second player this is prevent players for abandoning the game once they know they have lost based on the revealed hash. At the end of the deadline, the player who committed can trigger a \\\"win-by-default\\\". If both players reveal in time, the second player's reveal will call determineWinner() and advance the game to the result phaseUnlike commit, players can only reveal once\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/zeroxPoker.sol\":\"zeroxPoker\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.9.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _transferOwnership(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xba43b97fba0d32eb4254f6a5a297b39a19a247082a02d6e69349e071e2946218\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\"},\"contracts/zeroxPoker.sol\":{\"content\":\"pragma solidity >=0.8.0 <0.9.0;\\r\\n\\r\\n//SPDX-License-Identifier: MIT\\r\\n\\r\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\r\\n\\r\\n\\r\\ncontract zeroxPoker is Ownable {\\r\\n\\r\\n    address public deployer;\\r\\n\\r\\n    constructor(address initialOwner) {\\r\\n\\t\\tsuper.transferOwnership(initialOwner);\\r\\n        deployer = initialOwner;\\r\\n\\t}\\r\\n\\r\\n    // 4 Game Phases: Join, Commit, Reveal, Result\\r\\n    enum GameState {\\r\\n        JoinPhase,\\r\\n        CommitPhase,\\r\\n        RevealPhase,\\r\\n        ResultPhase\\r\\n    }\\r\\n    // 3 Game Results: P1 win, P2 win, draw\\r\\n    enum GameResult {\\r\\n        P1Win,\\r\\n        P2Win,\\r\\n        Draw\\r\\n    }\\r\\n    // Store the hashes for each hand easy comparison\\r\\n    bytes32 royalFlushHash = keccak256(abi.encodePacked(\\\"Royal Flush\\\"));\\r\\n    bytes32 straightFlushHash = keccak256(abi.encodePacked(\\\"Straight Flush\\\"));\\r\\n    bytes32 fourOfAKindHash = keccak256(abi.encodePacked(\\\"Four of a Kind\\\"));\\r\\n    bytes32 fullHouseHash = keccak256(abi.encodePacked(\\\"Full House\\\"));\\r\\n    bytes32 flushHash = keccak256(abi.encodePacked(\\\"Flush\\\"));\\r\\n    bytes32 straightHash = keccak256(abi.encodePacked(\\\"Straight\\\"));\\r\\n    bytes32 threeOfAKindHash = keccak256(abi.encodePacked(\\\"Three of a Kind\\\"));\\r\\n    bytes32 twoPairsHash = keccak256(abi.encodePacked(\\\"Two Pairs\\\"));\\r\\n    bytes32 onePairHash = keccak256(abi.encodePacked(\\\"One Pair\\\"));\\r\\n    bytes32 noSequenceHash = keccak256(abi.encodePacked(\\\"No Sequence\\\"));\\r\\n\\r\\n    // Holds the game data for a single match\\r\\n    struct GameStruct {\\r\\n        bool initialized;\\r\\n        address player1;\\r\\n        address player2;\\r\\n        GameState gameState;\\r\\n        bytes32 commit1;\\r\\n        bytes32 commit2;\\r\\n        bytes32 reveal1;\\r\\n        bytes32 reveal2;\\r\\n        uint256 revealDeadline;\\r\\n        uint256 betAmount;\\r\\n        GameResult gameResult;\\r\\n    }\\r\\n        \\r\\n        uint256 public totalBalance;\\r\\n\\r\\n\\r\\n    // Maps Game address => Game data\\r\\n    mapping(address => GameStruct) public games;\\r\\n    // Maps Player address to their current 'active' game\\r\\n    mapping(address => address) public activeGame;\\r\\n    //Checks if a player has already commited \\r\\n    mapping(address => mapping(address => bool)) public hasCommitted;\\r\\n\\r\\n    /**\\r\\n     * @notice Modifier that checks game is initialized, the sender is player 1/2\\r\\n     * and that the game state to be in the expected phase\\r\\n     * @param gameHash - the game code\\r\\n     * @param gameState - the three possible game phases\\r\\n     */\\r\\n    modifier validGameState(address gameHash, GameState gameState) {\\r\\n        // Check that the game exists\\r\\n        require(\\r\\n            games[gameHash].initialized == true,\\r\\n            \\\"Game code does not exist\\\"\\r\\n        );\\r\\n        // Check player is either player 1 or player 2\\r\\n        require(\\r\\n            games[gameHash].player1 == msg.sender ||\\r\\n                games[gameHash].player2 == msg.sender,\\r\\n            \\\"Player not in this game\\\"\\r\\n        );\\r\\n        // Check that game is in expected state\\r\\n        require(\\r\\n            games[gameHash].gameState == gameState,\\r\\n            \\\"Game not in correct phase\\\"\\r\\n        );\\r\\n        _;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Creates a new game, generating a game hash and setting player 1 as sender\\r\\n     *  and player 2 as the address provided\\r\\n     * @param otherPlayer - address for player 2\\r\\n     */\\r\\n    function createGame(address otherPlayer) public returns (address) {\\r\\n        //\\r\\n        address gameHash = generateGameHash();\\r\\n        require(\\r\\n            !games[gameHash].initialized,\\r\\n            \\\"Game code already exists, please try again\\\"\\r\\n        );\\r\\n        // Check other player isn't host\\r\\n        require(\\r\\n            msg.sender != otherPlayer,\\r\\n            \\\"Invited player must have a different address\\\"\\r\\n        );\\r\\n\\r\\n        games[gameHash].initialized = true;\\r\\n        games[gameHash].player1 = msg.sender;\\r\\n        games[gameHash].player2 = otherPlayer;\\r\\n\\r\\n        // Set game phase to initial join phase\\r\\n        games[gameHash].gameState = GameState.JoinPhase;\\r\\n\\r\\n        // Set P1 active game to game hash\\r\\n        activeGame[msg.sender] = gameHash;\\r\\n\\r\\n        // Return the game hash so it can be shared\\r\\n        return gameHash;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Function for player 2 to join a game with the game address\\r\\n     * @param gameHash - game address shared by player 1\\r\\n     */\\r\\n    function joinGame(address gameHash)\\r\\n        public\\r\\n        validGameState(gameHash, GameState.JoinPhase)\\r\\n    {\\r\\n        // Set game phase to commit phase\\r\\n        games[gameHash].gameState = GameState.CommitPhase;\\r\\n\\r\\n        // Set P2 active game to game hash\\r\\n        activeGame[msg.sender] = gameHash;\\r\\n    }\\r\\n\\r\\n    \\r\\n    function commit(string memory pokerHand, string memory salt)\\r\\n        public\\r\\n        payable\\r\\n        validGameState(activeGame[msg.sender], GameState.CommitPhase)\\r\\n    {\\r\\n        // Get the game hash from active game mapping\\r\\n        address gameHash = activeGame[msg.sender];\\r\\n\\r\\n        require(!hasCommitted[msg.sender][gameHash], \\\"Player has already committed\\\");\\r\\n\\r\\n        bytes32 unsaltedPokerHandHash = keccak256(abi.encodePacked(pokerHand));\\r\\n\\r\\n        // Check if choice  is valid \\r\\n        require(\\r\\n                unsaltedPokerHandHash == royalFlushHash ||\\r\\n                unsaltedPokerHandHash == straightFlushHash ||\\r\\n                unsaltedPokerHandHash == fullHouseHash ||\\r\\n                unsaltedPokerHandHash == fourOfAKindHash ||\\r\\n                unsaltedPokerHandHash == flushHash ||\\r\\n                unsaltedPokerHandHash == straightHash ||\\r\\n                unsaltedPokerHandHash == threeOfAKindHash ||\\r\\n                unsaltedPokerHandHash == twoPairsHash ||\\r\\n                unsaltedPokerHandHash == onePairHash ||\\r\\n                unsaltedPokerHandHash == noSequenceHash,\\r\\n                    \\\"Invalid poker hand\\\"\\r\\n        );\\r\\n\\r\\n        // Generate commit hash with pokerHand + user chosen salt\\r\\n        bytes32 commitHash = keccak256(abi.encodePacked(pokerHand, salt));\\r\\n\\r\\n        bool isPlayer1 = games[gameHash].player1 == msg.sender;\\r\\n        if (isPlayer1) {\\r\\n            games[gameHash].commit1 = commitHash;\\r\\n        } else {\\r\\n            games[gameHash].commit2 = commitHash;\\r\\n        }\\r\\n\\r\\n        // Mark the player as having committed\\r\\n        hasCommitted[msg.sender][gameHash] = true;  \\r\\n\\r\\n        // Store the amount of ether sent with the commit\\r\\n        games[gameHash].betAmount = msg.value;\\r\\n        totalBalance += msg.value;\\r\\n\\r\\n\\r\\n        // If both player have committed, set game state to reveal phase\\r\\n        if (games[gameHash].commit1 != 0 && games[gameHash].commit2 != 0) {\\r\\n            games[gameHash].gameState = GameState.RevealPhase;\\r\\n        }\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Function for players to reveal their choice. The first player to reveal sets a deadline for the second player\\r\\n     * this is prevent players for abandoning the game once they know they have lost based on the revealed hash.\\r\\n     * At the end of the deadline, the player who committed can trigger a \\\"win-by-default\\\".\\r\\n     * If both players reveal in time, the second player's reveal will call determineWinner() and advance the game to the result phase\\r\\n     * @notice Unlike commit, players can only reveal once\\r\\n     * @param salt - a player chosen secret string from the \\\"commit\\\" phase used to prove their choice via a hash match\\r\\n     */\\r\\n    function reveal(string memory salt)\\r\\n        public\\r\\n        validGameState(activeGame[msg.sender], GameState.RevealPhase)\\r\\n    {\\r\\n        // Get the game hash from active game mapping\\r\\n        address gameHash = activeGame[msg.sender];\\r\\n\\r\\n        bool isPlayer1 = games[gameHash].player1 == msg.sender;\\r\\n        // Check that player hasn't already revealed\\r\\n        if (isPlayer1) {\\r\\n            require(games[gameHash].reveal1 == 0, \\\"Already revealed\\\");\\r\\n        } else {\\r\\n            require(games[gameHash].reveal2 == 0, \\\"Already revealed\\\");\\r\\n        }\\r\\n\\r\\n        // Verify that one of the pokerHands + salt hashes matches commit hash\\r\\n        // Compare all nine possible pokerHands so they don't have to enter their choice again\\r\\n\\r\\n        bytes32 verificationHashroyalFlush = keccak256(abi.encodePacked(\\\"Royal Flush\\\", salt));\\r\\n        bytes32 verificationHashstraightFlush  = keccak256(abi.encodePacked(\\\"Straight Flush\\\", salt));\\r\\n        bytes32 verificationHashfourOfAKind  = keccak256(abi.encodePacked(\\\"Four of a Kind\\\", salt));\\r\\n        bytes32 verificationHashfullHouse  = keccak256(abi.encodePacked(\\\"Full House\\\", salt));\\r\\n        bytes32 verificationHashflush  = keccak256(abi.encodePacked(\\\"Flush\\\", salt));\\r\\n        bytes32 verificationHashstraight  = keccak256(abi.encodePacked(\\\"Straight\\\", salt));\\r\\n        bytes32 verificationHashthreeOfAKind  = keccak256(abi.encodePacked(\\\"Three of a Kind\\\", salt));\\r\\n        bytes32 verificationHashtwoPairs  = keccak256(abi.encodePacked(\\\"Two Pairs\\\", salt));\\r\\n        bytes32 verificationHashonePair  = keccak256(abi.encodePacked(\\\"One Pair\\\", salt));\\r\\n        bytes32 verificationHashnoSequence  = keccak256(abi.encodePacked(\\\"No Sequence\\\", salt));\\r\\n\\r\\n        bytes32 commitHash = isPlayer1 ? games[gameHash].commit1 : games[gameHash].commit2;\\r\\n\\r\\n        require(\\r\\n                verificationHashroyalFlush == commitHash ||\\r\\n                verificationHashstraightFlush == commitHash ||\\r\\n                verificationHashfourOfAKind == commitHash ||\\r\\n                verificationHashfullHouse == commitHash ||\\r\\n                verificationHashflush == commitHash ||\\r\\n                verificationHashstraight == commitHash ||\\r\\n                verificationHashthreeOfAKind == commitHash ||\\r\\n                verificationHashtwoPairs == commitHash ||\\r\\n                verificationHashonePair == commitHash ||\\r\\n                verificationHashnoSequence == commitHash,\\r\\n            \\\"Reveal hash doesn't match commit hash. Salt not the same as commit.\\\"\\r\\n        );\\r\\n        // Work backwards to infer their pokerHand\\r\\n        string memory pokerHand;\\r\\n        if (verificationHashroyalFlush == commitHash) {\\r\\n            pokerHand = \\\"Royal Flush\\\";\\r\\n        } else if (verificationHashstraightFlush == commitHash) {\\r\\n            pokerHand = \\\"Straight Flush\\\";\\r\\n        } else if (verificationHashfourOfAKind == commitHash) {\\r\\n            pokerHand = \\\"Four of a Kind\\\";\\r\\n        } else if (verificationHashfullHouse == commitHash) {\\r\\n            pokerHand = \\\"Full House\\\";\\r\\n        } else if (verificationHashflush == commitHash) {\\r\\n            pokerHand = \\\"Flush\\\";\\r\\n        } else if (verificationHashstraight == commitHash) {\\r\\n            pokerHand = \\\"Straight\\\";\\r\\n        } else if (verificationHashthreeOfAKind == commitHash) {\\r\\n            pokerHand = \\\"Three of a Kind\\\";\\r\\n        } else if (verificationHashtwoPairs == commitHash) {\\r\\n            pokerHand = \\\"Two Pairs\\\";\\r\\n        } else if (verificationHashonePair == commitHash) {\\r\\n            pokerHand = \\\"One Pair\\\";\\r\\n        } else {\\r\\n            pokerHand = \\\"No Sequence\\\";\\r\\n        }\\r\\n\\r\\n        // Save the revealed hash w/o salt\\r\\n        if (isPlayer1) {\\r\\n            games[gameHash].reveal1 = keccak256(abi.encodePacked(pokerHand));\\r\\n        } else {\\r\\n            games[gameHash].reveal2 = keccak256(abi.encodePacked(pokerHand));\\r\\n        }\\r\\n        // if both players revealed, determine winner\\r\\n        if (games[gameHash].reveal1 != 0 && games[gameHash].reveal2 != 0) {\\r\\n            games[gameHash].gameResult = determineWinner(\\r\\n                games[gameHash].reveal1,\\r\\n                games[gameHash].reveal2\\r\\n            );\\r\\n            games[gameHash].gameState = GameState.ResultPhase;\\r\\n        } else {\\r\\n            // Set deadline for other player to reveal\\r\\n            games[gameHash].revealDeadline = block.timestamp + 3 minutes;\\r\\n        }\\r\\n    }\\r\\n    /**\\r\\n     * @notice Escape function if a player does not reveal in time. The other player\\r\\n     * can call this function to trigger a \\\"win-by-default\\\"\\r\\n     */\\r\\n    function determineDefaultWinner()\\r\\n        public\\r\\n        validGameState(activeGame[msg.sender], GameState.RevealPhase)\\r\\n    {\\r\\n        // Get the game hash from active game mapping\\r\\n        address gameHash = activeGame[msg.sender];\\r\\n        games[gameHash].gameResult = determineWinner(\\r\\n            games[gameHash].reveal1,\\r\\n            games[gameHash].reveal2\\r\\n        );\\r\\n        games[gameHash].gameState = GameState.ResultPhase;\\r\\n        distributeWinnings();\\r\\n        leaveGame();\\r\\n    }\\r\\n    /**\\r\\n     * @notice Players can use this to leave the game at anytime. Usually at the end to reset the UI\\r\\n     */\\r\\n    function leaveGame() public {\\r\\n        activeGame[msg.sender] = address(0);\\r\\n    }\\r\\n    /// @notice Util Functions for generating hashes, computing winners and fetching data\\r\\n    function generateGameHash() public view returns (address) {\\r\\n        bytes32 prevHash = blockhash(block.number - 1);\\r\\n        // Game hash is a pseudo-randomly generated address from last blockhash + p1\\r\\n        return\\r\\n            address(bytes20(keccak256(abi.encodePacked(prevHash, msg.sender))));\\r\\n    }\\r\\n    /**\\r\\n     * @notice Determine the winner based on reveals for p1 and p2\\r\\n     * If only 1 has revealed, they win by default\\r\\n     * @param revealP1 - p1's reveal, defaults to 0 if not set\\r\\n     * @param revealP2 - p2's reveal, defaults to 0 if not set\\r\\n     */\\r\\n    function determineWinner(bytes32 revealP1, bytes32 revealP2)\\r\\n        public\\r\\n        view\\r\\n        returns (GameResult)\\r\\n    {\\r\\n        // If both players have revealed, determine the winner\\r\\n        if (revealP1 != 0 && revealP2 != 0) {\\r\\n            if (revealP1 == revealP2) {\\r\\n                return GameResult.Draw;\\r\\n            }\\r\\n            if (revealP1 == royalFlushHash) {\\r\\n                if (revealP2 == straightFlushHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == fourOfAKindHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == fullHouseHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == flushHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == straightHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == threeOfAKindHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == twoPairsHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == onePairHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                } else if (revealP2 == noSequenceHash) {\\r\\n                    return GameResult.P1Win;\\r\\n                }\\r\\n        } else if (revealP1 == straightFlushHash) {\\r\\n           if (revealP2 == fourOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == fullHouseHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == flushHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == straightHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == threeOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == fourOfAKindHash) {\\r\\n           if (revealP2 == fullHouseHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == flushHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == straightHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == threeOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == fullHouseHash) {\\r\\n           if (revealP2 == flushHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == straightHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == threeOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == flushHash) {\\r\\n           if (revealP2 == straightHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == threeOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == straightHash) {\\r\\n           if (revealP2 == threeOfAKindHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == threeOfAKindHash) {\\r\\n           if (revealP2 == twoPairsHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == twoPairsHash) {\\r\\n           if (revealP2 == onePairHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == onePairHash) {\\r\\n           if (revealP2 == noSequenceHash) {\\r\\n                return GameResult.P1Win;\\r\\n            } else {\\r\\n                return GameResult.P2Win;\\r\\n            }\\r\\n        } else if (revealP1 == noSequenceHash) {\\r\\n            return GameResult.P2Win;\\r\\n            }\\r\\n        }\\r\\n     \\r\\n        // Else the winner by default is the player that has revealed\\r\\n        else if (revealP1 != 0) {\\r\\n            return GameResult.P1Win;\\r\\n        } else {\\r\\n            return GameResult.P2Win;\\r\\n        }\\r\\n    }\\r\\n\\r\\n    function distributeWinnings() public {\\r\\n    \\r\\n        address gameHash = activeGame[msg.sender];\\r\\n        games[gameHash].gameState = GameState.ResultPhase; \\r\\n\\r\\n        // If the game has reached the ResultPhase\\r\\n        if (games[gameHash].gameState == GameState.ResultPhase) {\\r\\n            // Determine the winner\\r\\n            address winner;\\r\\n            address winner2;\\r\\n\\r\\n            // Calculate the total winnings\\r\\n            uint256 totalPot = totalBalance;\\r\\n            uint256 deployerCutWinnings = totalPot *  5 /  100; // Calculate  5% of Winnings\\r\\n            uint256 winnings = totalBalance - deployerCutWinnings; \\r\\n\\r\\n            uint256 halfWinnings = winnings/2;\\r\\n\\r\\n\\r\\n            //Determine Winner and send prize\\r\\n            if (games[gameHash].gameResult == GameResult.P1Win) {\\r\\n                winner = games[gameHash].player1;\\r\\n                payable(winner).transfer(winnings);\\r\\n                payable(deployer).transfer(deployerCutWinnings);\\r\\n            } \\r\\n            else if (games[gameHash].gameResult == GameResult.P2Win) {\\r\\n                winner = games[gameHash].player2;\\r\\n                payable(winner).transfer(winnings);\\r\\n                payable(deployer).transfer(deployerCutWinnings);\\r\\n            } \\r\\n            else if (games[gameHash].gameResult == GameResult.Draw) {\\r\\n                winner = games[gameHash].player1;\\r\\n                winner2 = games[gameHash].player2;\\r\\n                payable(winner).transfer(halfWinnings);\\r\\n                payable(winner2).transfer(halfWinnings);\\r\\n                payable(deployer).transfer(deployerCutWinnings);\\r\\n            }\\r\\n\\r\\n            // Reset the game state and bet amount\\r\\n            // games[gameHash].gameState = GameState.JoinPhase;\\r\\n            // games[gameHash].initialized = false;\\r\\n            games[gameHash].betAmount = 0;\\r\\n            totalBalance = 0;\\r\\n            leaveGame();\\r\\n        }\\r\\n    }\\r\\n    /**\\r\\n     * @notice Fetches the game data of the player's active game\\r\\n     * @param player - address of player\\r\\n     */\\r\\n    function getActiveGameData(address player)\\r\\n        public\\r\\n        view\\r\\n        returns (GameStruct memory)\\r\\n    {\\r\\n        // Get the game hash from active game mapping\\r\\n        address gameHash = activeGame[player];\\r\\n        return games[gameHash];\\r\\n    }\\r\\n}\",\"keccak256\":\"0x55492eadf6de4679a0e697ab8ce90d18da241d66c65143aa0c451bb6c1057578\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608034620002f057601f6200207538819003918201601f1916830192916001600160401b03841183851017620002f55780839260409586528339602092839181010312620002f057516001600160a01b038082169290838303620002f057620000683362000327565b8451828101906a0a4def2c2d8408cd8eae6d60ab1b8252600b81526200008e816200030b565b5190206002558451828101906d0a6e8e4c2d2ced0e8408cd8eae6d60931b8252600e8152620000bd816200030b565b5190206003558451828101906d119bdd5c881bd988184812da5b9960921b8252600e8152620000ec816200030b565b5190206004558451828101906946756c6c20486f75736560b01b8252600a815262000117816200030b565b5190206005558451828101906408cd8eae6d60db1b8252600581526200013d816200030b565b5190206006558451828101906714dd1c985a59da1d60c21b82526008815262000166816200030b565b5190206007558451828101906e151a1c9959481bd988184812da5b99608a1b8252600f815262000196816200030b565b5190206008558451828101906854776f20506169727360b81b825260098152620001c0816200030b565b5190206009558451828101906727b732902830b4b960c11b825260088152620001e9816200030b565b519020600a558451828101906a4e6f2053657175656e636560a81b8252600b815262000215816200030b565b519020600b5533906000541603620002ae5782156200025c57506200023a9062000327565b600180546001600160a01b03191691909117905551611d0690816200036f8239f35b60849084519062461bcd60e51b82526004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152fd5b60649084519062461bcd60e51b825280600483015260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152fd5b600080fd5b634e487b7160e01b600052604160045260246000fd5b604081019081106001600160401b03821117620002f557604052565b600080546001600160a01b039283166001600160a01b03198216811783559216907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a356fe6080604052600436101561001257600080fd5b60003560e01c8063157665311461138857806320f001211461135b5780632389a29014611273578063474d0b5a146111095780634c2612471461099d578063715018a61461094457806379131a191461087f5780637d2026cd1461086657806381d14ffc146104f95780638da5cb5b146104d0578063a83d3e8d14610495578063ad7a672f14610477578063b1501f9c14610441578063c5d0af8b14610413578063caa50840146103b9578063d5f3948814610390578063d82e076f146101ab5763f2fde38b146100e257600080fd5b346101a65760203660031901126101a6576100fb6114b7565b6101036115af565b6001600160a01b0390811690811561015257600054826001600160601b0360a01b821617600055167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0600080a3005b60405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608490fd5b600080fd5b346101a65760203660031901126101a6576101c46114b7565b60006101406040516101d5816114cd565b8281528260208201528260408201528260608201528260808201528260a08201528260c08201528260e08201528261010082015282610120820152015260018060a01b0316600052600e60205260018060a01b0360406000205416600052600d60205260406000206040519061024a826114cd565b805460ff8082161515845260089190911c6001600160a01b0390811660208501526001830154908116604085015260a01c16600481101561037a5760ff91600891606085015260028101546080850152600381015460a0850152600481015460c0850152600581015460e08501526006810154610100850152600781015461012085015201541690600382101561037a57610160916101408201526103786101406040519280511515845260018060a01b03602082015116602085015260018060a01b03604082015116604085015261032b60608201516060860190611595565b6080810151608085015260a081015160a085015260c081015160c085015260e081015160e085015261010081015161010085015261012081015161012085015201516101408301906115a2565bf35b634e487b7160e01b600052602160045260246000fd5b346101a65760003660031901126101a6576001546040516001600160a01b039091168152602090f35b346101a65760403660031901126101a6576103d26114b7565b6001600160a01b0360243581811692908390036101a65716600052600f602052604060002090600052602052602060ff604060002054166040519015158152f35b346101a65760403660031901126101a65760206104346024356004356117b4565b61037860405180926115a2565b346101a65760003660031901126101a65761047533600052600e60205260406000206001600160601b0360a01b8154169055565b005b346101a65760003660031901126101a6576020600c54604051908152f35b346101a65760203660031901126101a65760206001600160a01b03806104b96114b7565b16600052600e825260406000205416604051908152f35b346101a65760003660031901126101a6576000546040516001600160a01b039091168152602090f35b60403660031901126101a65767ffffffffffffffff6004358181116101a65761052690369060040161153e565b906024359081116101a65761053f90369060040161153e565b90336000526020600e815260018060a01b039283604060002054169384600052600d9384845260019561057d8760ff60406000205416151514611607565b8060005285855260406000205483339160081c16148015610854575b6105a290611653565b60005284845260ff866040600020015460a01c16600481101561037a57866105ca911461169f565b33600052600e8452816040600020541692600f8552604060002084600052855260ff6040600020541661080f57604051908582018261060982866116eb565b039261061d601f199485810183528261151c565b5190206002548114908115610803575b81156107f7575b81156107eb575b81156107df575b81156107d3575b81156107c7575b81156107bb575b81156107af575b81156107a3575b50156107695761068c91610698916040519384916106868a840180986116eb565b906116eb565b0390810183528261151c565b5190209082600052848452339060406000205460081c161460001461075b576002604060002001555b33600052600f8252604060002081600052825260406000208460ff1982541617905582825234600760406000200155600c5434810180911161074557600c5560005252600260406000200154151580610734575b61071b57005b604060002001805460ff60a01b1916600160a11b179055005b506003604060002001541515610715565b634e487b7160e01b600052601160045260246000fd5b6003604060002001556106c1565b60405162461bcd60e51b8152600481018790526012602482015271125b9d985b1a59081c1bdad95c881a185b9960721b6044820152606490fd5b9050600b541489610665565b600a548114915061065e565b60095481149150610657565b60085481149150610650565b60075481149150610649565b60065481149150610642565b6004548114915061063b565b60055481149150610634565b6003548114915061062d565b60405162461bcd60e51b815260048101869052601c60248201527f506c617965722068617320616c726561647920636f6d6d6974746564000000006044820152606490fd5b50604060002087015483163314610599565b346101a65760003660031901126101a6576104756119b6565b346101a65760203660031901126101a6576101606001600160a01b03806108a46114b7565b16600052600d60205261037860406000209182549260018101546002820154600383015460048401549060058501549261091960068701549560ff600860078a01549901541698806040519c8d60ff82161515905260081c1660208d0152811660408c015260ff60608c019160a01c16611595565b608089015260a088015260c087015260e08601526101008501526101208401526101408301906115a2565b346101a65760003660031901126101a65761095d6115af565b600080546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b346101a65760203660031901126101a65760043567ffffffffffffffff81116101a6576109ce90369060040161153e565b33600052600e60205260018060a01b0390816040600020541680600052600d602052610a06600160ff60406000205416151514611607565b80600052600d60205260406000205483339160081c161480156110f6575b610a2d90611653565b600052600d60205260ff60016040600020015460a01c16600481101561037a576002610a59911461169f565b33600052600e60205281604060002054169182600052600d602052339060406000205460081c161490816000146110df5782600052600d602052610aa560046040600020015415611716565b6040516a0a4def2c2d8408cd8eae6d60ab1b6020820152610adb81610acd602b8201856116eb565b03601f19810183528261151c565b60208151910120906040516d0a6e8e4c2d2ced0e8408cd8eae6d60931b6020820152610b0e81610acd602e8201856116eb565b602081519101206040516d119bdd5c881bd988184812da5b9960921b6020820152610b4081610acd602e8201866116eb565b602081519101206040516946756c6c20486f75736560b01b6020820152610b6e81610acd602a8201876116eb565b602081519101206040516408cd8eae6d60db1b6020820152610b9781610acd60258201886116eb565b6020815191012060405160208101906714dd1c985a59da1d60c21b8252610bc581610acd602882018a6116eb565b519020916040516e151a1c9959481bd988184812da5b99608a1b6020820152610bf581610acd602f82018a6116eb565b60208151910120936040516854776f20506169727360b81b6020820152610c2381610acd602982018b6116eb565b6020815191012095610acd610c836040516727b732902830b4b960c11b6020820152610c5781610acd8d60288301906116eb565b60208151910120996040519283916a4e6f2053657175656e636560a81b6020840152602b8301906116eb565b602081519101208a6000146110c6578b600052600d602052600260406000200154809a5b148a819282156110bc575b82156110b2575b82156110a8575b821561109e575b8215611094575b821561108a575b8215611080575b8215611076575b821561106c575b505015610ff55715610e2e57505050505050505050604051610d0b81611500565b600b81526a0a4def2c2d8408cd8eae6d60ab1b6020820152905b15610dff57604051610d3f81610acd6020820180956116eb565b51902081600052600d6020526004604060002001555b80600052600d602052600460406000200154151580610dee575b15610dcc5780600052600d602052610da8610d9b600460406000200154600560406000200154906117b4565b6008604060002001611755565b6000908152600d60205260409020600101805460ff60a01b1916600360a01b179055005b60b442019081421161074557600052600d602052600660406000200155600080f35b506005604060002001541515610d6f565b604051610e1481610acd6020820180956116eb565b51902081600052600d602052600560406000200155610d55565b8803610e69575050505050505050604051610e4881611500565b600e81526d0a6e8e4c2d2ced0e8408cd8eae6d60931b602082015290610d25565b8703610ea35750505050505050604051610e8281611500565b600e81526d119bdd5c881bd988184812da5b9960921b602082015290610d25565b8603610ed857505050505050604051610ebb81611500565b600a81526946756c6c20486f75736560b01b602082015290610d25565b8503610f07575050505050604051610eef81611500565b600581526408cd8eae6d60db1b602082015290610d25565b8403610f385750505050604051610f1d81611500565b600881526714dd1c985a59da1d60c21b602082015290610d25565b8303610f6f57505050604051610f4d81611500565b600f81526e151a1c9959481bd988184812da5b99608a1b602082015290610d25565b8203610f9f575050604051610f8381611500565b600981526854776f20506169727360b81b602082015290610d25565b03610fcb57604051610fb081611500565b600881526727b732902830b4b960c11b602082015290610d25565b604051610fd781611500565b600b81526a4e6f2053657175656e636560a81b602082015290610d25565b60405162461bcd60e51b815260206004820152604360248201527f52657665616c206861736820646f65736e2774206d6174636820636f6d6d697460448201527f20686173682e2053616c74206e6f74207468652073616d6520617320636f6d6d60648201526234ba1760e91b608482015260a490fd5b1490508a8e610cea565b8b82149250610ce3565b8a82149250610cdc565b8982149250610cd5565b8882149250610cce565b8782149250610cc7565b8682149250610cc0565b8582149250610cb9565b8482149250610cb2565b8b600052600d602052600360406000200154809a610ca7565b6110f160056040600020015415611716565b610aa5565b5060406000206001015483163314610a24565b346101a6576020806003193601126101a6576111236114b7565b6001600160a01b038061113461176d565b169182600052600d845260ff6040600020541661121b57168033146111c1576000828152600d8452604080822080546001610100600160a81b0333600881901b919091166001600160a81b031993841617821784559201805490911660ff60a01b199590951694909417909355918152600e845281902080546001600160a01b0319168317905551908152f35b60405162461bcd60e51b815260048101849052602c60248201527f496e766974656420706c61796572206d7573742068617665206120646966666560448201526b72656e74206164647265737360a01b6064820152608490fd5b60405162461bcd60e51b815260048101859052602a60248201527f47616d6520636f646520616c7265616479206578697374732c20706c65617365604482015269103a393c9030b3b0b4b760b11b6064820152608490fd5b346101a6576020806003193601126101a6576001600160a01b03906112dd8261129a6114b7565b169283600052600d83526112ba600160ff60406000205416151514611607565b83600052600d83528060406000205460081c163314908115611347575b50611653565b81600052600d815260ff60016040600020015460a01c1690600482101561037a5761130a600e921561169f565b6000838152600d82526040808220600101805460ff60a01b1916600160a01b179055338252929091522080546001600160a01b0319169091179055005b6040600020600101541633149050846112d7565b346101a65760003660031901126101a657602061137661176d565b6040516001600160a01b039091168152f35b346101a65760003660031901126101a657336000526020600e815260018060a01b0390816040600020541680600052600d82526113d1600160ff60406000205416151514611607565b80600052600d825260406000205483339160081c161480156114a4575b6113f790611653565b600052600d815260ff60016040600020015460a01c1691600483101561037a576114256002600d941461169f565b33600052600e82526040600020541680600052828252611459610d9b600460406000200154600560406000200154906117b4565b600090815291905260409020600101805460ff60a01b1916600360a01b1790556114816119b6565b61047533600052600e60205260406000206001600160601b0360a01b8154169055565b50604060002060010154831633146113ee565b600435906001600160a01b03821682036101a657565b610160810190811067ffffffffffffffff8211176114ea57604052565b634e487b7160e01b600052604160045260246000fd5b6040810190811067ffffffffffffffff8211176114ea57604052565b90601f8019910116810190811067ffffffffffffffff8211176114ea57604052565b81601f820112156101a65780359067ffffffffffffffff82116114ea5760405192611573601f8401601f19166020018561151c565b828452602083830101116101a657816000926020809301838601378301015290565b90600482101561037a5752565b90600382101561037a5752565b6000546001600160a01b031633036115c357565b606460405162461bcd60e51b815260206004820152602060248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152fd5b1561160e57565b60405162461bcd60e51b815260206004820152601860248201527f47616d6520636f646520646f6573206e6f7420657869737400000000000000006044820152606490fd5b1561165a57565b60405162461bcd60e51b815260206004820152601760248201527f506c61796572206e6f7420696e20746869732067616d650000000000000000006044820152606490fd5b156116a657565b60405162461bcd60e51b815260206004820152601960248201527f47616d65206e6f7420696e20636f7272656374207068617365000000000000006044820152606490fd5b9081519160005b838110611703575050016000815290565b80602080928401015181850152016116f2565b1561171d57565b60405162461bcd60e51b815260206004820152601060248201526f105b1c9958591e481c995d99585b195960821b6044820152606490fd5b90600381101561037a5760ff80198354169116179055565b60001943014381116107455760405160208101914082523360601b6040820152603481526060810181811067ffffffffffffffff8211176114ea5760405251902060601c90565b60009291839180151580806119ad575b1561199d575081811461199457600254810361185a575060035481036117e957509150565b60045481036117f757509150565b600554810361180557509150565b600654810361181357509150565b600754810361182157509150565b600854810361182f57509150565b600954810361183d57509150565b600a54810361184b57509150565b600b54146118565750565b9150565b600394919293945481146000146118d9575050600454810361187a575090565b6005548103611887575090565b6006548103611894575090565b60075481036118a1575090565b60085481036118ae575090565b60095481036118bb575090565b600a5481036118c8575090565b600b54036118d35790565b50600190565b60045481036118f15750506005548103611887575090565b60055481036119095750506006548103611894575090565b600654810361192157505060075481036118a1575090565b600754810361193957505060085481036118ae575090565b600854810361195157505060095481036118bb575090565b6009548103611969575050600a5481036118c8575090565b600a54810361197f575050600b54036118d35790565b9150929150600b541461198e57565b60019150565b50600293505050565b9293945050506000146118d35790565b508215156117c4565b336000908152600e60209081526040808320546001600160a01b03908116808552600d8085528386206001908101805460ff60a01b1916600360a01b179081905594959194919360049290919060a01c60ff1683811015611cbd57600314611a23575b5050505050505050565b600c54926005840284810460051485151715611caa57606490049384810391818311611c97578a60ff60088c86881c938b81528d8d52200154166003811015611c8457908b8d94939215600014611b1d5750505081809381928983528b8b52878d84205460081c169089849114611b14575bf115611b0a57878093819382935416828215611b01575bf115611af457918493916007935b85525282200155600c55611ae733600052600e60205260406000206001600160601b0360a01b8154169055565b3880808080808080611a19565b50505051903d90823e3d90fd5b506108fc611aac565b86513d89823e3d90fd5b506108fc611a95565b600890858b60ff94959697528d8d52200154166003811015611c84578503611b9a57505089808093819387878e8e8e8e88525285200154169089849114611b91575bf115611b0a57878093819382935416828215611b88575bf115611af45791849391600793611aba565b506108fc611b76565b506108fc611b5f565b91509a999896949392915085899896985285855260ff6008888b200154166003811015611c7157899a9b5060029099989914611bde575b5050505060079394611aba565b9091929395978095975286865282888a205460081c1683838a8c20015416908a80808086819581159687611c68575bf115611c5e578a8093819382938390611c55575bf115611b0a57878093819382935416828215611c4c575bf115611af457929091849238808080611bd1565b506108fc611c38565b506108fc611c21565b89513d8c823e3d90fd5b506108fc611c0d565b634e487b7160e01b8a5260218c5260248afd5b634e487b7160e01b8d526021835260248dfd5b634e487b7160e01b8b526011905260248afd5b634e487b7160e01b8a526011825260248afd5b634e487b7160e01b895260218452602489fdfea264697066735822122001bffd00c4e770f7d8d79128407410610b6c7ee8e3d8cceeec41d143c8fb920a64736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436101561001257600080fd5b60003560e01c8063157665311461138857806320f001211461135b5780632389a29014611273578063474d0b5a146111095780634c2612471461099d578063715018a61461094457806379131a191461087f5780637d2026cd1461086657806381d14ffc146104f95780638da5cb5b146104d0578063a83d3e8d14610495578063ad7a672f14610477578063b1501f9c14610441578063c5d0af8b14610413578063caa50840146103b9578063d5f3948814610390578063d82e076f146101ab5763f2fde38b146100e257600080fd5b346101a65760203660031901126101a6576100fb6114b7565b6101036115af565b6001600160a01b0390811690811561015257600054826001600160601b0360a01b821617600055167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0600080a3005b60405162461bcd60e51b815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201526564647265737360d01b6064820152608490fd5b600080fd5b346101a65760203660031901126101a6576101c46114b7565b60006101406040516101d5816114cd565b8281528260208201528260408201528260608201528260808201528260a08201528260c08201528260e08201528261010082015282610120820152015260018060a01b0316600052600e60205260018060a01b0360406000205416600052600d60205260406000206040519061024a826114cd565b805460ff8082161515845260089190911c6001600160a01b0390811660208501526001830154908116604085015260a01c16600481101561037a5760ff91600891606085015260028101546080850152600381015460a0850152600481015460c0850152600581015460e08501526006810154610100850152600781015461012085015201541690600382101561037a57610160916101408201526103786101406040519280511515845260018060a01b03602082015116602085015260018060a01b03604082015116604085015261032b60608201516060860190611595565b6080810151608085015260a081015160a085015260c081015160c085015260e081015160e085015261010081015161010085015261012081015161012085015201516101408301906115a2565bf35b634e487b7160e01b600052602160045260246000fd5b346101a65760003660031901126101a6576001546040516001600160a01b039091168152602090f35b346101a65760403660031901126101a6576103d26114b7565b6001600160a01b0360243581811692908390036101a65716600052600f602052604060002090600052602052602060ff604060002054166040519015158152f35b346101a65760403660031901126101a65760206104346024356004356117b4565b61037860405180926115a2565b346101a65760003660031901126101a65761047533600052600e60205260406000206001600160601b0360a01b8154169055565b005b346101a65760003660031901126101a6576020600c54604051908152f35b346101a65760203660031901126101a65760206001600160a01b03806104b96114b7565b16600052600e825260406000205416604051908152f35b346101a65760003660031901126101a6576000546040516001600160a01b039091168152602090f35b60403660031901126101a65767ffffffffffffffff6004358181116101a65761052690369060040161153e565b906024359081116101a65761053f90369060040161153e565b90336000526020600e815260018060a01b039283604060002054169384600052600d9384845260019561057d8760ff60406000205416151514611607565b8060005285855260406000205483339160081c16148015610854575b6105a290611653565b60005284845260ff866040600020015460a01c16600481101561037a57866105ca911461169f565b33600052600e8452816040600020541692600f8552604060002084600052855260ff6040600020541661080f57604051908582018261060982866116eb565b039261061d601f199485810183528261151c565b5190206002548114908115610803575b81156107f7575b81156107eb575b81156107df575b81156107d3575b81156107c7575b81156107bb575b81156107af575b81156107a3575b50156107695761068c91610698916040519384916106868a840180986116eb565b906116eb565b0390810183528261151c565b5190209082600052848452339060406000205460081c161460001461075b576002604060002001555b33600052600f8252604060002081600052825260406000208460ff1982541617905582825234600760406000200155600c5434810180911161074557600c5560005252600260406000200154151580610734575b61071b57005b604060002001805460ff60a01b1916600160a11b179055005b506003604060002001541515610715565b634e487b7160e01b600052601160045260246000fd5b6003604060002001556106c1565b60405162461bcd60e51b8152600481018790526012602482015271125b9d985b1a59081c1bdad95c881a185b9960721b6044820152606490fd5b9050600b541489610665565b600a548114915061065e565b60095481149150610657565b60085481149150610650565b60075481149150610649565b60065481149150610642565b6004548114915061063b565b60055481149150610634565b6003548114915061062d565b60405162461bcd60e51b815260048101869052601c60248201527f506c617965722068617320616c726561647920636f6d6d6974746564000000006044820152606490fd5b50604060002087015483163314610599565b346101a65760003660031901126101a6576104756119b6565b346101a65760203660031901126101a6576101606001600160a01b03806108a46114b7565b16600052600d60205261037860406000209182549260018101546002820154600383015460048401549060058501549261091960068701549560ff600860078a01549901541698806040519c8d60ff82161515905260081c1660208d0152811660408c015260ff60608c019160a01c16611595565b608089015260a088015260c087015260e08601526101008501526101208401526101408301906115a2565b346101a65760003660031901126101a65761095d6115af565b600080546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b346101a65760203660031901126101a65760043567ffffffffffffffff81116101a6576109ce90369060040161153e565b33600052600e60205260018060a01b0390816040600020541680600052600d602052610a06600160ff60406000205416151514611607565b80600052600d60205260406000205483339160081c161480156110f6575b610a2d90611653565b600052600d60205260ff60016040600020015460a01c16600481101561037a576002610a59911461169f565b33600052600e60205281604060002054169182600052600d602052339060406000205460081c161490816000146110df5782600052600d602052610aa560046040600020015415611716565b6040516a0a4def2c2d8408cd8eae6d60ab1b6020820152610adb81610acd602b8201856116eb565b03601f19810183528261151c565b60208151910120906040516d0a6e8e4c2d2ced0e8408cd8eae6d60931b6020820152610b0e81610acd602e8201856116eb565b602081519101206040516d119bdd5c881bd988184812da5b9960921b6020820152610b4081610acd602e8201866116eb565b602081519101206040516946756c6c20486f75736560b01b6020820152610b6e81610acd602a8201876116eb565b602081519101206040516408cd8eae6d60db1b6020820152610b9781610acd60258201886116eb565b6020815191012060405160208101906714dd1c985a59da1d60c21b8252610bc581610acd602882018a6116eb565b519020916040516e151a1c9959481bd988184812da5b99608a1b6020820152610bf581610acd602f82018a6116eb565b60208151910120936040516854776f20506169727360b81b6020820152610c2381610acd602982018b6116eb565b6020815191012095610acd610c836040516727b732902830b4b960c11b6020820152610c5781610acd8d60288301906116eb565b60208151910120996040519283916a4e6f2053657175656e636560a81b6020840152602b8301906116eb565b602081519101208a6000146110c6578b600052600d602052600260406000200154809a5b148a819282156110bc575b82156110b2575b82156110a8575b821561109e575b8215611094575b821561108a575b8215611080575b8215611076575b821561106c575b505015610ff55715610e2e57505050505050505050604051610d0b81611500565b600b81526a0a4def2c2d8408cd8eae6d60ab1b6020820152905b15610dff57604051610d3f81610acd6020820180956116eb565b51902081600052600d6020526004604060002001555b80600052600d602052600460406000200154151580610dee575b15610dcc5780600052600d602052610da8610d9b600460406000200154600560406000200154906117b4565b6008604060002001611755565b6000908152600d60205260409020600101805460ff60a01b1916600360a01b179055005b60b442019081421161074557600052600d602052600660406000200155600080f35b506005604060002001541515610d6f565b604051610e1481610acd6020820180956116eb565b51902081600052600d602052600560406000200155610d55565b8803610e69575050505050505050604051610e4881611500565b600e81526d0a6e8e4c2d2ced0e8408cd8eae6d60931b602082015290610d25565b8703610ea35750505050505050604051610e8281611500565b600e81526d119bdd5c881bd988184812da5b9960921b602082015290610d25565b8603610ed857505050505050604051610ebb81611500565b600a81526946756c6c20486f75736560b01b602082015290610d25565b8503610f07575050505050604051610eef81611500565b600581526408cd8eae6d60db1b602082015290610d25565b8403610f385750505050604051610f1d81611500565b600881526714dd1c985a59da1d60c21b602082015290610d25565b8303610f6f57505050604051610f4d81611500565b600f81526e151a1c9959481bd988184812da5b99608a1b602082015290610d25565b8203610f9f575050604051610f8381611500565b600981526854776f20506169727360b81b602082015290610d25565b03610fcb57604051610fb081611500565b600881526727b732902830b4b960c11b602082015290610d25565b604051610fd781611500565b600b81526a4e6f2053657175656e636560a81b602082015290610d25565b60405162461bcd60e51b815260206004820152604360248201527f52657665616c206861736820646f65736e2774206d6174636820636f6d6d697460448201527f20686173682e2053616c74206e6f74207468652073616d6520617320636f6d6d60648201526234ba1760e91b608482015260a490fd5b1490508a8e610cea565b8b82149250610ce3565b8a82149250610cdc565b8982149250610cd5565b8882149250610cce565b8782149250610cc7565b8682149250610cc0565b8582149250610cb9565b8482149250610cb2565b8b600052600d602052600360406000200154809a610ca7565b6110f160056040600020015415611716565b610aa5565b5060406000206001015483163314610a24565b346101a6576020806003193601126101a6576111236114b7565b6001600160a01b038061113461176d565b169182600052600d845260ff6040600020541661121b57168033146111c1576000828152600d8452604080822080546001610100600160a81b0333600881901b919091166001600160a81b031993841617821784559201805490911660ff60a01b199590951694909417909355918152600e845281902080546001600160a01b0319168317905551908152f35b60405162461bcd60e51b815260048101849052602c60248201527f496e766974656420706c61796572206d7573742068617665206120646966666560448201526b72656e74206164647265737360a01b6064820152608490fd5b60405162461bcd60e51b815260048101859052602a60248201527f47616d6520636f646520616c7265616479206578697374732c20706c65617365604482015269103a393c9030b3b0b4b760b11b6064820152608490fd5b346101a6576020806003193601126101a6576001600160a01b03906112dd8261129a6114b7565b169283600052600d83526112ba600160ff60406000205416151514611607565b83600052600d83528060406000205460081c163314908115611347575b50611653565b81600052600d815260ff60016040600020015460a01c1690600482101561037a5761130a600e921561169f565b6000838152600d82526040808220600101805460ff60a01b1916600160a01b179055338252929091522080546001600160a01b0319169091179055005b6040600020600101541633149050846112d7565b346101a65760003660031901126101a657602061137661176d565b6040516001600160a01b039091168152f35b346101a65760003660031901126101a657336000526020600e815260018060a01b0390816040600020541680600052600d82526113d1600160ff60406000205416151514611607565b80600052600d825260406000205483339160081c161480156114a4575b6113f790611653565b600052600d815260ff60016040600020015460a01c1691600483101561037a576114256002600d941461169f565b33600052600e82526040600020541680600052828252611459610d9b600460406000200154600560406000200154906117b4565b600090815291905260409020600101805460ff60a01b1916600360a01b1790556114816119b6565b61047533600052600e60205260406000206001600160601b0360a01b8154169055565b50604060002060010154831633146113ee565b600435906001600160a01b03821682036101a657565b610160810190811067ffffffffffffffff8211176114ea57604052565b634e487b7160e01b600052604160045260246000fd5b6040810190811067ffffffffffffffff8211176114ea57604052565b90601f8019910116810190811067ffffffffffffffff8211176114ea57604052565b81601f820112156101a65780359067ffffffffffffffff82116114ea5760405192611573601f8401601f19166020018561151c565b828452602083830101116101a657816000926020809301838601378301015290565b90600482101561037a5752565b90600382101561037a5752565b6000546001600160a01b031633036115c357565b606460405162461bcd60e51b815260206004820152602060248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152fd5b1561160e57565b60405162461bcd60e51b815260206004820152601860248201527f47616d6520636f646520646f6573206e6f7420657869737400000000000000006044820152606490fd5b1561165a57565b60405162461bcd60e51b815260206004820152601760248201527f506c61796572206e6f7420696e20746869732067616d650000000000000000006044820152606490fd5b156116a657565b60405162461bcd60e51b815260206004820152601960248201527f47616d65206e6f7420696e20636f7272656374207068617365000000000000006044820152606490fd5b9081519160005b838110611703575050016000815290565b80602080928401015181850152016116f2565b1561171d57565b60405162461bcd60e51b815260206004820152601060248201526f105b1c9958591e481c995d99585b195960821b6044820152606490fd5b90600381101561037a5760ff80198354169116179055565b60001943014381116107455760405160208101914082523360601b6040820152603481526060810181811067ffffffffffffffff8211176114ea5760405251902060601c90565b60009291839180151580806119ad575b1561199d575081811461199457600254810361185a575060035481036117e957509150565b60045481036117f757509150565b600554810361180557509150565b600654810361181357509150565b600754810361182157509150565b600854810361182f57509150565b600954810361183d57509150565b600a54810361184b57509150565b600b54146118565750565b9150565b600394919293945481146000146118d9575050600454810361187a575090565b6005548103611887575090565b6006548103611894575090565b60075481036118a1575090565b60085481036118ae575090565b60095481036118bb575090565b600a5481036118c8575090565b600b54036118d35790565b50600190565b60045481036118f15750506005548103611887575090565b60055481036119095750506006548103611894575090565b600654810361192157505060075481036118a1575090565b600754810361193957505060085481036118ae575090565b600854810361195157505060095481036118bb575090565b6009548103611969575050600a5481036118c8575090565b600a54810361197f575050600b54036118d35790565b9150929150600b541461198e57565b60019150565b50600293505050565b9293945050506000146118d35790565b508215156117c4565b336000908152600e60209081526040808320546001600160a01b03908116808552600d8085528386206001908101805460ff60a01b1916600360a01b179081905594959194919360049290919060a01c60ff1683811015611cbd57600314611a23575b5050505050505050565b600c54926005840284810460051485151715611caa57606490049384810391818311611c97578a60ff60088c86881c938b81528d8d52200154166003811015611c8457908b8d94939215600014611b1d5750505081809381928983528b8b52878d84205460081c169089849114611b14575bf115611b0a57878093819382935416828215611b01575bf115611af457918493916007935b85525282200155600c55611ae733600052600e60205260406000206001600160601b0360a01b8154169055565b3880808080808080611a19565b50505051903d90823e3d90fd5b506108fc611aac565b86513d89823e3d90fd5b506108fc611a95565b600890858b60ff94959697528d8d52200154166003811015611c84578503611b9a57505089808093819387878e8e8e8e88525285200154169089849114611b91575bf115611b0a57878093819382935416828215611b88575bf115611af45791849391600793611aba565b506108fc611b76565b506108fc611b5f565b91509a999896949392915085899896985285855260ff6008888b200154166003811015611c7157899a9b5060029099989914611bde575b5050505060079394611aba565b9091929395978095975286865282888a205460081c1683838a8c20015416908a80808086819581159687611c68575bf115611c5e578a8093819382938390611c55575bf115611b0a57878093819382935416828215611c4c575bf115611af457929091849238808080611bd1565b506108fc611c38565b506108fc611c21565b89513d8c823e3d90fd5b506108fc611c0d565b634e487b7160e01b8a5260218c5260248afd5b634e487b7160e01b8d526021835260248dfd5b634e487b7160e01b8b526011905260248afd5b634e487b7160e01b8a526011825260248afd5b634e487b7160e01b895260218452602489fdfea264697066735822122001bffd00c4e770f7d8d79128407410610b6c7ee8e3d8cceeec41d143c8fb920a64736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "createGame(address)": {
+        "params": {
+          "otherPlayer": "- address for player 2"
+        }
+      },
+      "determineWinner(bytes32,bytes32)": {
+        "params": {
+          "revealP1": "- p1's reveal, defaults to 0 if not set",
+          "revealP2": "- p2's reveal, defaults to 0 if not set"
+        }
+      },
+      "getActiveGameData(address)": {
+        "params": {
+          "player": "- address of player"
+        }
+      },
+      "joinGame(address)": {
+        "params": {
+          "gameHash": "- game address shared by player 1"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "reveal(string)": {
+        "params": {
+          "salt": "- a player chosen secret string from the \"commit\" phase used to prove their choice via a hash match"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "createGame(address)": {
+        "notice": "Creates a new game, generating a game hash and setting player 1 as sender  and player 2 as the address provided"
+      },
+      "determineDefaultWinner()": {
+        "notice": "Escape function if a player does not reveal in time. The other player can call this function to trigger a \"win-by-default\""
+      },
+      "determineWinner(bytes32,bytes32)": {
+        "notice": "Determine the winner based on reveals for p1 and p2 If only 1 has revealed, they win by default"
+      },
+      "generateGameHash()": {
+        "notice": "Util Functions for generating hashes, computing winners and fetching data"
+      },
+      "getActiveGameData(address)": {
+        "notice": "Fetches the game data of the player's active game"
+      },
+      "joinGame(address)": {
+        "notice": "Function for player 2 to join a game with the game address"
+      },
+      "leaveGame()": {
+        "notice": "Players can use this to leave the game at anytime. Usually at the end to reset the UI"
+      },
+      "reveal(string)": {
+        "notice": "Function for players to reveal their choice. The first player to reveal sets a deadline for the second player this is prevent players for abandoning the game once they know they have lost based on the revealed hash. At the end of the deadline, the player who committed can trigger a \"win-by-default\". If both players reveal in time, the second player's reveal will call determineWinner() and advance the game to the result phaseUnlike commit, players can only reveal once"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 141,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "deployer",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 174,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "royalFlushHash",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 182,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "straightFlushHash",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 190,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "fourOfAKindHash",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 198,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "fullHouseHash",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 206,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "flushHash",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 214,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "straightHash",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 222,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "threeOfAKindHash",
+        "offset": 0,
+        "slot": "8",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 230,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "twoPairsHash",
+        "offset": 0,
+        "slot": "9",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 238,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "onePairHash",
+        "offset": 0,
+        "slot": "10",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 246,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "noSequenceHash",
+        "offset": 0,
+        "slot": "11",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 273,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "totalBalance",
+        "offset": 0,
+        "slot": "12",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 278,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "games",
+        "offset": 0,
+        "slot": "13",
+        "type": "t_mapping(t_address,t_struct(GameStruct)271_storage)"
+      },
+      {
+        "astId": 282,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "activeGame",
+        "offset": 0,
+        "slot": "14",
+        "type": "t_mapping(t_address,t_address)"
+      },
+      {
+        "astId": 288,
+        "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+        "label": "hasCommitted",
+        "offset": 0,
+        "slot": "15",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_enum(GameResult)166": {
+        "encoding": "inplace",
+        "label": "enum zeroxPoker.GameResult",
+        "numberOfBytes": "1"
+      },
+      "t_enum(GameState)162": {
+        "encoding": "inplace",
+        "label": "enum zeroxPoker.GameState",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_address)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_mapping(t_address,t_struct(GameStruct)271_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct zeroxPoker.GameStruct)",
+        "numberOfBytes": "32",
+        "value": "t_struct(GameStruct)271_storage"
+      },
+      "t_struct(GameStruct)271_storage": {
+        "encoding": "inplace",
+        "label": "struct zeroxPoker.GameStruct",
+        "members": [
+          {
+            "astId": 248,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bool"
+          },
+          {
+            "astId": 250,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "player1",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 252,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "player2",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 255,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "gameState",
+            "offset": 20,
+            "slot": "1",
+            "type": "t_enum(GameState)162"
+          },
+          {
+            "astId": 257,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "commit1",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 259,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "commit2",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 261,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "reveal1",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 263,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "reveal2",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 265,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "revealDeadline",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 267,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "betAmount",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 270,
+            "contract": "contracts/zeroxPoker.sol:zeroxPoker",
+            "label": "gameResult",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_enum(GameResult)166"
+          }
+        ],
+        "numberOfBytes": "288"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
